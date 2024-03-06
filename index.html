@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="r"></div>
+    <div id="b"></div>
+    <div id="d"></div>
+
+    <script>
+        function RNG () {
+            var r = Math.floor(Math.random()*1000);
+            document.getElementById("r").innerText = "Randomly Generated Number: " + r;
+
+            var h = Math.floor ((r%1000)/100);
+            var t = Math.floor ((r%100)/10);
+            var o = r % 10;
+            var th = Math.floor(r/1000);
+        
+            document.getElementById("b").innerText = "Breakdown: " + h*100 + ", " + t*10 + ", " + o;
+            var d = new Date();
+            document.getElementById("d").innerText = d;
+    }
+        RNG();
+    </script>
+</body>
+</html>
